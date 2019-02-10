@@ -1,3 +1,10 @@
+<!--
+--------------------------------------------------------------------------------------------------------------
+Copyright (c) 2019 Yusuke Kato, All rights reserved.
+ゲームをクリアする前にソースコードを見てはいけない
+--------------------------------------------------------------------------------------------------------------
+-->
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -7,11 +14,18 @@
 </head>
 
 <body>
-    <script src="main.js"></script>
+    <script src="choices_button.js"></script>
+    <script src="update_stage.js"></script>
     <h2>Tink Quest -GameBooks-</h2>
     <hr>
+
     stage number : <b id="stageNum">0</b>
+
     <p id="text">game text</p>
+    <p id="c1">c1</p>
+    <p id="c2">c2</p>
+    <p id="c3">c3</p>
+
     <button onclick="button1()">1</button>
     <button onclick="button2()">2</button>
     <button onclick="button3()">3</button>
