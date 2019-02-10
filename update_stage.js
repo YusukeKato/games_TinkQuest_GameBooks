@@ -29,7 +29,7 @@ window.onload = function()
     read_json();
 }
 
-// JSONデータ読み込み
+// JSONデータ読み込み(jQuery)
 function read_json()
 {
     $.ajax({
@@ -37,10 +37,8 @@ function read_json()
         url: 'https://yusukekato.github.io/games_TinkQuest_GameBooks/data.json',
         dataType: 'json',
         success: function(json) {
-            //data = JSON.parse(json);    
+            // パースの必要なし
             data = json;
-            //console.log(data[0].t);
-            //console.log(typeof(data));
         }
     });
 }
