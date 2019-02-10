@@ -9,6 +9,7 @@ var data;
 // GOボタンが押されたらステージを更新
 function button_go()
 {
+    update_stageText(0);
     var stageNum = document.getElementById("stageNum").textContent;
     var choices = document.getElementById("choices").textContent;
     init_choices();
@@ -25,7 +26,6 @@ function init_choices()
 // HTML読み込み時に実行
 window.onload = function()
 {
-    update_stageText(0);
     read_json();
 }
 
@@ -39,7 +39,7 @@ function read_json()
         success: function(json) {
             //data = JSON.parse(json);    
             data = json;
-            console.log(data[0].t);
+            //console.log(data[0].t);
             //console.log(typeof(data));
         }
     });
