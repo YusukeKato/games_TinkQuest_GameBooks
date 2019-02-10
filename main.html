@@ -12,25 +12,35 @@ Copyright (c) 2019 Yusuke Kato, All rights reserved.
 </head>
 
 <body>
+    <!-- スクリプトを読み込み -->
     <script src="choices_button.js"></script>
     <script src="update_stage.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <!-- タイトル -->
     <h2>Tink Quest -GameBooks-</h2>
     <hr>
 
+    <!-- ステージ番号 -->
     stage number : <b id="stageNum">0</b>
 
+    <!-- ゲームテキスト -->
     <p id="text">game text</p>
     <p id="c1">c1</p>
     <p id="c2">c2</p>
     <p id="c3">c3</p>
 
+    <!-- UIボタン -->
     <button onclick="button1()">1</button>
     <button onclick="button2()">2</button>
     <button onclick="button3()">3</button>
     <button onclick="button_go()">GO</button>
+
+    <!-- 選択肢を表示 -->
     <br>
     choices : <b id="choices">0</b>
 
+    <!-- 簡易フッター -->
     <hr>
     <p>Copyright &copy 2019 Yusuke Kato, All rights reserved.</p>
     <p>License : MIT</p>
