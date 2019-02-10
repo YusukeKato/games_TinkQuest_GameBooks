@@ -3,6 +3,9 @@
 // ゲームをクリアする前にソースコードを見てはいけない
 // --------------------------------------------------------------------------------------------------------------
 
+// stage data
+var data;
+
 // GOボタンが押されたらステージを更新
 function button_go()
 {
@@ -34,7 +37,10 @@ function read_json()
         url: 'https://yusukekato.github.io/games_TinkQuest_GameBooks/data.json',
         dataType: 'json',
         success: function(json) {
-            console.log(json);
+            //data = JSON.parse(json);    
+            data = json;
+            console.log(data[0].t);
+            //console.log(typeof(data));
         }
     });
 }
@@ -51,14 +57,9 @@ function setting_stage(t, c1, c2, c3)
 // 選択肢によってステージ番号を更新
 function update_stages(stageNum, choices)
 {
-    if(stageNum == 0)
-    {
-        if(choices == 1) return 1;
-        else if(choices == 2) return 2;
-        else if(choices == 3) return 3;
-        else return stageNum;
-    }
-
+    if(choices == 1) return data[stageNum].one;
+    else if(choices == 2) return data[stageNum].two;
+    else if(choices == 3) return data[stageNum].three;
     else return stageNum;
 }
 
@@ -68,22 +69,11 @@ function update_stageText(stageNum)
     document.getElementById("stageNum").textContent = stageNum;
     var t = "エラー"; var c1 = ""; var c2 = ""; var c3 = "";
 
-    if(stageNum == 0)
-    {
-        t = "あなたは見知らぬ部屋で目を覚ました。部屋の中には木でできた机と椅子、\
-            太陽の光がさす窓が一つ、そして外へ続く扉がある。なぜ自分がここにいるのか記憶がない。";
-        c1 = "扉を開けて外に出る";
-        c2 = "窓から外をのぞく";
-        c3 = "夢から覚める";
-    }
-
-    if(stageNum == 1)
-    {
-        t = "扉を開けて部屋の外に出た。";
-        c1 = "";
-        c2 = "";
-        c3 = "";
-    }
+    // dataは配列になっているから、data[n].t、みたいにnを指定する
+    t = data[stageNum].t;
+    c1 = data[stageNum].c1;
+    c2 = data[stageNum].c2;
+    c3 = data[stageNum].c3;
 
     setting_stage(t, c1, c2, c3);
 }
