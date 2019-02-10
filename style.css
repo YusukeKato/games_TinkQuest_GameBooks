@@ -1,0 +1,20 @@
+.button {
+    width: 120px;
+    height: 60px;
+    background-color: #FFFFFF;
+    font-size: 24px;
+}
+
+#text_panel {
+    width: 800px;
+    height: 400px;
+    background-color: #FFFFFF;
+}
+
+.text1 {
+   font-size: 20px; 
+}
+
+.text2 {
+    font-size: 24px;
+}

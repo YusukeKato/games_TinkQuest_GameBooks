@@ -9,6 +9,7 @@ Copyright (c) 2019 Yusuke Kato, All rights reserved.
 <head>
     <meta charset="UTF-8">
     <title>Tink Quest -GameBooks-</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -22,23 +23,25 @@ Copyright (c) 2019 Yusuke Kato, All rights reserved.
     <hr>
 
     <!-- ステージ番号 -->
-    stage number : <b id="stageNum">0</b>
+    <b class="text1">stage number : </b><b id="stageNum" class="text1">0</b>
 
     <!-- ゲームテキスト -->
-    <p id="text">あなたの冒険が始まります</p>
-    <p id="c1">GOボタンを押したらスタート</p>
-    <p id="c2"></p>
-    <p id="c3"></p>
+    <div id="text_panel">
+        <p id="text" class="text2">あなたの冒険が始まります</p>
+        <p id="c1" class="text2">GOボタンを押したらスタート</p>
+        <p id="c2" class="text2"></p>
+        <p id="c3" class="text2"></p>
+    </div>
 
     <!-- UIボタン -->
-    <button onclick="button1()">1</button>
-    <button onclick="button2()">2</button>
-    <button onclick="button3()">3</button>
-    <button onclick="button_go()">GO</button>
+    <button onclick="button1()" class="button">1</button>
+    <button onclick="button2()" class="button">2</button>
+    <button onclick="button3()" class="button">3</button>
+    <button onclick="button_go()" class="button">GO</button>
 
     <!-- 選択肢を表示 -->
     <br>
-    choices : <b id="choices">0</b>
+    <b class="text1">choices : </b><b id="choices" class="text1">0</b>
 
     <!-- 簡易フッター -->
     <hr>
