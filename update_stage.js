@@ -65,7 +65,7 @@ function update_stages(stageNum, choices)
 // ステージ番号によってテキストを表示
 function update_stageText(stageNum)
 {
-    document.getElementById("stageNum").textContent = data[stageNum].id;
+    document.getElementById("stageNum").textContent = data[stageNum].snum;
     var t = "エラー"; var c1 = ""; var c2 = ""; var c3 = "";
 
     // dataは配列になっているから、data[n].t、みたいにnを指定する
