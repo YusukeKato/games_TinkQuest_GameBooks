@@ -30,6 +30,7 @@ function get_stageNum(stageSnum)
             return i;
         }
     }
+    return 0;
 }
 
 // 選択肢の番号を初期化
