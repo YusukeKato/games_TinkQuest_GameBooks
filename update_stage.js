@@ -5,17 +5,31 @@
 
 // stage data
 var data;
-var stage_num = 0;
 
 // GOボタンが押されたらステージを更新
 function button_go()
 {
-    update_stageText(stage_num);
-    //var stageNum = document.getElementById("stageNum").textContent;
+    // 更新前の情報を取得
+    var stageSnum = document.getElementById("stageNum").textContent;
     var choices = document.getElementById("choices").textContent;
+    var stage_num = get_stageNum(stageSnum);
     init_choices();
-    stage_num = update_stages(stage_num, choices);
-    update_stageText(stage_num);
+    // 更新
+    var stageSnum2 = update_stages(stage_num, choices);
+    var stage_num2 = get_stageNum(stageSnum2);
+    update_stageText(stage_num2);
+}
+
+// ステージ番号から配列番号を取得
+function get_stageNum(stageSnum)
+{
+    for(var i = 0; i < data.length; i++)
+    {
+        if(data[i].snum == "stageSnum")
+        {
+            return i;
+        }
+    }
 }
 
 // 選択肢の番号を初期化
@@ -59,7 +73,7 @@ function update_stages(stageNum, choices)
     if(choices == 1) return data[stageNum].one;
     else if(choices == 2) return data[stageNum].two;
     else if(choices == 3) return data[stageNum].three;
-    else return stageNum;
+    else return "s-00";
 }
 
 // ステージ番号によってテキストを表示
