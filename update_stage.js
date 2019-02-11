@@ -5,16 +5,17 @@
 
 // stage data
 var data;
+var stage_num = 0;
 
 // GOボタンが押されたらステージを更新
 function button_go()
 {
-    update_stageText("s-00");
-    var stageNum = document.getElementById("stageNum").textContent;
+    update_stageText(stage_num);
+    //var stageNum = document.getElementById("stageNum").textContent;
     var choices = document.getElementById("choices").textContent;
     init_choices();
-    stageNum = update_stages(stageNum, choices);
-    update_stageText(stageNum);
+    stage_num = update_stages(stage_num, choices);
+    update_stageText(stage_num);
 }
 
 // 選択肢の番号を初期化
@@ -64,7 +65,7 @@ function update_stages(stageNum, choices)
 // ステージ番号によってテキストを表示
 function update_stageText(stageNum)
 {
-    document.getElementById("stageNum").textContent = stageNum;
+    document.getElementById("stageNum").textContent = data[stageNum].id;
     var t = "エラー"; var c1 = ""; var c2 = ""; var c3 = "";
 
     // dataは配列になっているから、data[n].t、みたいにnを指定する
