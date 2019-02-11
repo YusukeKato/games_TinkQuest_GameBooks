@@ -9,7 +9,7 @@ var data;
 // GOボタンが押されたらステージを更新
 function button_go()
 {
-    update_stageText(0);
+    update_stageText("s-00");
     var stageNum = document.getElementById("stageNum").textContent;
     var choices = document.getElementById("choices").textContent;
     init_choices();
