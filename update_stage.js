@@ -25,7 +25,7 @@ function get_stageNum(stageSnum)
 {
     for(var i = 0; i < data.length; i++)
     {
-        if(data[i].snum == "stageSnum")
+        if(data[i].snum == stageSnum)
         {
             return i;
         }
