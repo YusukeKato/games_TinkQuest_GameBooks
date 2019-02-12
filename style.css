@@ -41,20 +41,20 @@ body {
 
     .button {
         width: 20%;
-        height: 60px;
+        height: 100px;
         background-color: #FFFFFF;
-        font-size: 20px;
+        font-size: 30px;
     }
 
     .text1 {
-       font-size: 26px; 
+       font-size: 32px; 
     }
 
     .text2 {
-        font-size: 28px;
+        font-size: 36px;
     }
 
     .text3 {
-        font-size: 22px;
+        font-size: 26px;
     }
 }
