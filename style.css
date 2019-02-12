@@ -1,3 +1,11 @@
+@charset "utf-8";
+
+body {
+    overflow: auto;
+    margin: auto auto auto auto;
+    padding-left: 8px;
+}
+
 .button {
     width: 200px;
     height: 60px;
@@ -6,7 +14,7 @@
 }
 
 #text_panel {
-    width: 800px;
+    width: 80%;
     background-color: #FFFFFF;
 }
 
@@ -20,4 +28,18 @@
 
 .text3 {
     font-size: 22px;
+}
+
+@media screen and (max-width: 480px) {
+    .text1 {
+       font-size: 20px; 
+    }
+
+    .text2 {
+        font-size: 20px;
+    }
+
+    .text3 {
+        font-size: 18px;
+    }
 }
