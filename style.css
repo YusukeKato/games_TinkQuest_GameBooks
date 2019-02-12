@@ -16,8 +16,14 @@ body {
     .button {
         width: 10%;
         height: 60px;
-        background-color: #EEEEEE;
+        background-color: #FFFFFF;
         font-size: 22px;
+        font-weight: bold;
+        border: solid 1px #000;
+    }
+
+    .button:hover {
+        background-color: #EEEEEE;
     }
 
     .text1 {
@@ -42,8 +48,14 @@ body {
     .button {
         width: 20%;
         height: 100px;
-        background-color: #EEEEEE;
+        background-color: #FFFFFF;
         font-size: 30px;
+        font-weight: bold;
+        border: solid 1px #000;
+    }
+
+    .button:hover {
+        background-color: #EEEEEE;
     }
 
     .text1 {
