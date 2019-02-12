@@ -47,11 +47,12 @@ body {
     }
 
     .text1 {
-       font-size: 32px; 
+       font-size: 34px; 
     }
 
     .text2 {
-        font-size: 36px;
+        font-size: 40px;
+        line-height: 1.6;
     }
 
     .text3 {
