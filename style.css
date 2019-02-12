@@ -7,12 +7,12 @@ body {
     -webkit-text-size-adjust: 100%;
 }
 
-#text_panel {
-    width: 80%;
-    background-color: #FFFFFF;
-}
-
 @media screen and (min-width: 1000px) {
+    #text_panel {
+        width: 80%;
+        background-color: #FFFFFF;
+    }
+
     .button {
         width: 10%;
         height: 60px;
@@ -34,6 +34,11 @@ body {
 }
 
 @media screen and (max-width: 999px) {
+    #text_panel {
+        width: 96%;
+        background-color: #FFFFFF;
+    }
+
     .button {
         width: 20%;
         height: 60px;
@@ -42,14 +47,14 @@ body {
     }
 
     .text1 {
-       font-size: 22px; 
+       font-size: 26px; 
     }
 
     .text2 {
-        font-size: 24px;
+        font-size: 28px;
     }
 
     .text3 {
-        font-size: 20px;
+        font-size: 22px;
     }
 }
