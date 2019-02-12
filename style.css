@@ -4,6 +4,7 @@ body {
     overflow: auto;
     margin: auto auto auto auto;
     padding-left: 8px;
+    -webkit-text-size-adjust: 100%;
 }
 
 #text_panel {
@@ -11,14 +12,14 @@ body {
     background-color: #FFFFFF;
 }
 
-.button {
-    width: 20%;
-    height: 60px;
-    background-color: #FFFFFF;
-    font-size: 24px;
-}
+@media screen and (min-width: 1000px) {
+    .button {
+        width: 10%;
+        height: 60px;
+        background-color: #FFFFFF;
+        font-size: 22px;
+    }
 
-@media screen and (min-width: 800px) {
     .text1 {
        font-size: 24px; 
     }
@@ -32,16 +33,23 @@ body {
     }
 }
 
-@media screen and (max-width: 799px) {
-    .text1 {
-       font-size: 18px; 
-    }
-
-    .text2 {
+@media screen and (max-width: 999px) {
+    .button {
+        width: 20%;
+        height: 60px;
+        background-color: #FFFFFF;
         font-size: 20px;
     }
 
+    .text1 {
+       font-size: 22px; 
+    }
+
+    .text2 {
+        font-size: 24px;
+    }
+
     .text3 {
-        font-size: 18px;
+        font-size: 20px;
     }
 }
