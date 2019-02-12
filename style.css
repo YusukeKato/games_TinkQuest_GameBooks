@@ -9,14 +9,14 @@ body {
 
 @media screen and (min-width: 1000px) {
     #text_panel {
-        width: 80%;
+        width: 50%;
         background-color: #FFFFFF;
     }
 
     .button {
         width: 10%;
         height: 60px;
-        background-color: #FFFFFF;
+        background-color: #EEEEEE;
         font-size: 22px;
     }
 
@@ -42,7 +42,7 @@ body {
     .button {
         width: 20%;
         height: 100px;
-        background-color: #FFFFFF;
+        background-color: #EEEEEE;
         font-size: 30px;
     }
 
